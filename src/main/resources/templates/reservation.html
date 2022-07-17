@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>reservation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>My reservations</h1>
+<tr th:each="value : ${ordering}" class="alert alert-info my-2">
+    <td th:text="'data: ' + ${value.data} + ' time: ' + ${value.time}"/>
+    <form th:action="@{delete}" method="post">
+        <input type="hidden" name="id" th:value="${value.id}"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+    </form>
+</tr>
+<br>
+<a href="/main">Back</a>
+</body>
+</html>

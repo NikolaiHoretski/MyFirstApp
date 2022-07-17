@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form th:action="@{/registration}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><label> First Name: <input type="firstName" name="firstName"/> </label></div>
+    <div><label> Last Name: <input type="lastName" name="lastName"/> </label></div>
+    <div><label> Phone number: <input type="phoneNumber" name="phoneNumber"/> </label></div>
+    <div><input type="submit" value="Save"/></div>
+</form>
+<p> <a th:href="@{/login}">Back</a></p>
+</body>
+</html>
